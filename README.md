@@ -51,7 +51,7 @@ The image dataset cannot be released publicly due to Facebook's Terms of Service
 
 ## Pipeline
 
-This project, unfortunately, due to time limitations, requires multiple manual steps and has not been fully automated. However, the running logic of the attached scripts is:
+The evaluation workflow consists of modular scripts for batch payload construction, parsing, and statistical analysis:
 
 1. **`BatchAPI calls 1-5.py`** — Encodes images, builds JSONL batch files for all 3 LLMs for strategies S1-S5.
 2. **`BatchAPI S6.py`** — Same as above but for S6, few-shot prompting.
