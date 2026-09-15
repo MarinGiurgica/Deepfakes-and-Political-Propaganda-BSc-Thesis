@@ -32,20 +32,23 @@ The image dataset cannot be released publicly due to Facebook's Terms of Service
 
 ## Repository Structure
 
-```
-├── Qwen/Gemini/GPT - output excels # The resulting excels for each strategy for each model
-├── BSc Project arxiv Version       # The final report 
-├── Metrics.xlsx                    # Aggregated metrics across all conditions
-├── plots/                          # Various plots
-├── Prompts_Final.md                # Final prompt text, readable format
-├── Prompts_All_Versions.md         # Full prompt evolution history (v8–v14)
-├── BatchAPI calls.py               # Build and submit batch jobs to model APIs
-├── JsonL_to_Excel.py               # Convert batch output JSONL files to Excel
-├── Clean_Outputs.py                # Parse, normalise, and flag UNPARSED rows
-├── Thesis_Analysis.py              # Analysis and plotting scripts used in the thesis
-├── Analysis.py                     # Exploratory analysis scripts
-├── Public Dataset.xlsx             # Excel with URLs to Facebook images used in the experiment, to comply with GDPR, as well as author`s  annotation on Real/Fake
-```
+`## Repository Structure
+
+```text
+├── data/
+│   ├── raw/                  # Public dataset index with URLs & annotations
+│   └── processed/            # Aggregated metrics and per-model output spreadsheets
+├── docs/                     # Full thesis report and prompt evolution history
+├── reports/figures/          # Visualizations and performance plots
+├── src/                      # Modular batch processing, inference, and analysis scripts
+│   ├── batch_api_calls.py    # Builds & submits batch jobs (S1–S5)
+│   ├── batch_api_fewshot.py  # Builds & submits few-shot batch jobs (S6)
+│   ├── jsonl_to_excel.py     # Parses batch responses into spreadsheets
+│   ├── clean_outputs.py      # Normalizes outputs and flags unparsed rows
+│   ├── metrics.py            # Computes macro-F1, Cohen's Kappa, and condition tables
+│   └── analysis.py           # Generates statistical figures and thesis evaluations
+├── requirements.txt          # Python dependencies
+└── README.md
 
 ---
 
